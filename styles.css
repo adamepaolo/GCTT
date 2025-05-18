@@ -1,0 +1,215 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Layout */
+header,
+nav,
+main,
+footer {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  background: #005580;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+header img {
+  max-width: 100px;
+  border-radius: 0.5rem;
+}
+
+.company-name {
+  font-size: 2.2rem;
+  margin: 0.5rem 0;
+  color: white;
+}
+
+body.dark-mode .company-name {
+  color: #f1f1f1;
+}
+
+#darkModeToggle {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+body.dark-mode #darkModeToggle {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Navigation */
+nav {
+  background: #eee;
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 0.5rem;
+}
+
+nav a {
+  color: #005580;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body.dark-mode nav {
+  background: #1f1f1f;
+}
+
+body.dark-mode nav a {
+  color: #8ecae6;
+}
+
+/* Content Sections */
+.content {
+  margin: 2rem 0;
+    /* padding: 1.5rem;
+    background: #fff;
+    border-radius: 0.5rem; */
+
+}
+
+.content h2,
+.content h3 {
+  margin-bottom: 1rem;
+  color: #005580;
+}
+
+body.dark-mode .content h2,
+body.dark-mode .content h3 {
+  color: #8ecae6;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+
+/* Testimonials */
+blockquote {
+  font-style: italic;
+  margin: 1rem 0;
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #005580;
+  color: #fff;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* Contact */
+.contact a {
+  color: #0077cc;
+}
+
+body.dark-mode .contact a {
+  color: #80caff;
+}
+
+/* Booking Form */
+.booking-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.form-column {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+body.dark-mode .booking-form input,
+body.dark-mode .booking-form select,
+body.dark-mode .booking-form textarea {
+  background-color: #222;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+.booking-form textarea {
+  flex-basis: 100%;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.booking-form button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.booking-form button:hover {
+  background-color: #005fa3;
+}
+
+body.dark-mode .booking-form button {
+  background-color: #3399ff;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .form-column {
+    flex: 1 1 100%;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}

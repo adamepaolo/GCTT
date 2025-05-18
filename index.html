@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gold Corner Travel and Tours</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="darkmode.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      flatpickr("input[type='date']", {
+        altInput: true,
+        altFormat: "F j, Y",
+        dateFormat: "Y-m-d",
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.jpg" alt="Gold Corner Travel and Tours Logo">
+    <h1 class="company-name">Gold Corner Travel and Tours</h1>
+    <p>Your Gateway to the World – Domestic & International Travel Since 2019</p>
+    <button id="darkModeToggle" aria-label="Toggle Dark Mode">Toggle Dark Mode<i class="fas fa-moon"></i></button>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+    <a href="#booking">Booking</a>
+    <a href="https://www.facebook.com/lorie.adame.77" target="_blank">Facebook</a>
+  </nav>
+
+  <main>
+    <section class="content" id="about">
+      <h2>About Us</h2>
+      <p>Established on January 16, 2019, Gold Corner Travel and Tours is a dedicated travel agency based in Ilog, Taal, Batangas, Philippines. We specialize in providing unforgettable travel experiences both domestically and internationally. Whether you're exploring the beautiful islands of the Philippines or venturing abroad, we're here to make your journey smooth, safe, and memorable. Our business is primarily conducted online, allowing clients to plan and book their travels with ease and convenience.</p>
+      <br><h3>Mission</h3>
+      <p>Gold Corner Travel & Tours officially started operations on January 16, 2019. Owned by the Adame family, the agency was founded on a vision of excellence, with a commitment to deliver outstanding travel services while preparing for a secure future. As overseas Filipino workers (OFWs), the couple behind the agency understands the value of time and family. Inspired by the mother’s experience in handling travel arrangements, the agency was born out of both necessity and passion.</p>
+    <p>Our mission goes beyond profit – at Gold Corner Travel & Tours, our Commitment is our Service. We uphold integrity, fairness, and dedication in every client interaction. We aim to provide a travel experience that’s not only seamless, but also sincere and memorable.</p>
+    <br>  
+    <h3>Vision</h3>
+      <p>To become one of the most trusted and leading travel agencies in the Philippines and beyond – recognized for our personalized approach, exceptional service quality, and deep commitment to helping individuals and families create meaningful and memorable travel experiences. We strive to continuously grow while staying grounded in the values that inspired our journey.</p>
+    </section>
+
+    <section class="content" id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Domestic travel bookings (Philippines)</li>
+        <li>International travel bookings</li>
+        <li>Tour packages and itineraries</li>
+        <li>Online consultation and booking assistance</li>
+        <li>Customized travel planning for solo, family, or corporate groups</li>
+      </ul>
+    </section>
+
+    <section class="content" id="testimonials">
+      <h2>What Our Clients Say</h2>
+      <blockquote>“The whole trip went without a hitch, you totally hit it just right for us!”<footer>- Sam R.</footer></blockquote>
+      <blockquote>“Our honeymoon was magical, Thanks to Gold Corner's exquisite planning.”<footer>- Sara D.</footer></blockquote>
+      <blockquote>“Thanks Gold Corner! We loved every second & would go back there in a heartbeat.”<footer>- Laura G.</footer></blockquote>
+    </section>
+
+    <section class="contact content" id="contact">
+      <h3>Contact Us</h3>
+      <p><strong>Email:</strong> <a href="mailto:info.gctt@gmail.com">info.gctt@gmail.com</a></p>
+      <p><strong>Contact Numbers:</strong> +63 9178048926 / +63 98974154</p>
+      <p><strong>WhatsApp:</strong> +63 9760578307</p>
+      <p><strong>Viber:</strong> +63-9178048926</p>
+      <p><strong>Location:</strong> Ilog, Taal, Batangas, Philippines (Online-based)</p>
+    </section>
+
+
+    <hr>
+    <section class="content" id="booking">
+      <h2>Booking Inquiry</h2>
+      <form action="https://formspree.io/f/manovgqz" method="POST" class="booking-form">
+        <div class="form-column">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="Name" placeholder="Full Name" required />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="Email" placeholder="Email Address" required />
+
+          <label for="phone">Contact Number</label>
+          <input type="tel" id="phone" name="Phone" placeholder="Contact Number" required />
+
+          <label for="travel-date">Travel Date</label>
+          <input type="date" id="travel-date" name="TravelDate" required />
+
+          <label for="days">Number of Days</label>
+          <input type="number" id="days" name="Days" placeholder="Number of Days" required />
+
+          <label for="destination">Destination</label>
+          <select id="destination" name="Destination" required>
+            <option value="" disabled selected>Select your destination</option>
+            <option value="Philippines">Philippines</option>
+            <option value="International">International</option>
+          </select>
+
+          
+        </div>
+
+        <div class="form-column">
+            <label for="travelers">Number of Travelers</label>
+          <input type="text" id="travelers" name="Travelers" placeholder="Number of Travelers" required />
+          <label for="travel-type">Type of Travel</label>
+          <select id="travel-type" name="TravelType" required>
+            <option value="" disabled selected>Select type of travel</option>
+            <option value="Solo">Solo</option>
+            <option value="Family">Family</option>
+            <option value="Corporate">Corporate</option>
+          </select>
+
+          <label for="budget">Estimated Budget</label>
+          <input type="text" id="budget" name="Budget" placeholder="Estimated Budget" required />
+
+          <label for="accommodation">Accommodation</label>
+          <select id="accommodation" name="Accommodation" required>
+            <option value="" disabled selected>Select accommodation type</option>
+            <option value="Hotel">Hotel</option>
+            <option value="Hostel">Hostel</option>
+            <option value="Airbnb">Airbnb</option>
+            <option value="Resort">Resort</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="requests">Special Requests</label>
+          <input type="text" id="requests" name="SpecialRequests" placeholder="Special Requests (if any)" />
+
+          <label for="insurance">Travel Insurance</label>
+          <select id="insurance" name="TravelInsurance" required>
+            <option value="" disabled selected>Do you need travel insurance?</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+
+        <label for="message">Tell us about your travel plans</label>
+        <textarea id="message" name="Message" rows="4" placeholder="Tell us about your travel plans..." required></textarea>
+
+        <button type="submit">Submit Inquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gold Corner Travel and Tours. All rights reserved.</p>
+  </footer>
+</body>
+</html>
